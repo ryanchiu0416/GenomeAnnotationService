@@ -1,0 +1,6 @@
+#!/bin/bash -ex
+sudo aws s3 cp s3://mpcs-students/rpchiu/gas_ann.zip /home/ubuntu/gas_ann.zip
+sudo unzip /home/ubuntu/gas_ann.zip -d /home/ubuntu
+sudo chown -R ubuntu:ubuntu /home/ubuntu/gas
+sudo chmod +x /home/ubuntu/gas/ann/run_ann.sh
+sudo -u ubuntu /home/ubuntu/gas/ann/run_ann.sh &
